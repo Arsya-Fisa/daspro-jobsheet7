@@ -3,8 +3,8 @@ public class TiketBioskop {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-    int harga = 50000;
-    int totalHarga = 0, totalTiket = 0, jumlahtiket, totalbayar = 0;
+    double harga = 50000,jumlahtiket = 0;
+    int totalHarga = 0, totalTiket = 0,  totalbayar = 0;
     double  diskon = 0;
 
     do{
@@ -27,10 +27,12 @@ public class TiketBioskop {
     }
 
 
-    totalHarga = (jumlahtiket * harga);
+    totalHarga = (int) (jumlahtiket * harga);
     totalbayar = (int) (totalHarga-(diskon*totalHarga)) ;
-    System.out.println("Total harga: " + totalHarga);
-    System.out.println("Total bayar: " + totalbayar);
+    totalTiket = (int) jumlahtiket;
+    System.out.println("Total penjualan tiket: " + totalTiket + " Tiket");
+    System.out.println("Total harga tiket: " + totalHarga);
+    System.out.println("Total harga penjualan tiket (selama 1 hari): " + totalbayar);
     
        
 
